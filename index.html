@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shravan's OS UI</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container" id="container">
+      <div class="arena" id="arena"></div>
+      <nav class="toolbar" id="toolbar">
+        <div class="main">
+          <a id="start" href="#"><i class="fas fa-rocket"></i></a>
+          <ul class="sub">
+            <li>
+              <a href="#"><i class="fas fa-user"></i> User</a>
+            </li>
+            <li id="browser">
+              <a><i class="fab fa-firefox"></i>&nbsp;Browser</a>
+            </li>
+            <li>
+              <a href="#"><i class="fas fa-columns"></i> Applications</a>
+              <ul class="superSub">
+                <li><a href="#">Notepad</a></li>
+                <li id="paint"><a>Paint</a></li>
+                <li><a href="#">Word</a></li>
+                <li><a href="#">Presentation</a></li>
+                <li><a href="#">Excel</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#"><i class="fas fa-gamepad"></i> Games</a>
+              <ul class="superSub">
+                <li><a href="#">Solitaire</a></li>
+                <li><a href="#">Minsweeper</a></li>
+                <li><a href="#">Chess</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#"><i class="fas fa-power-off"></i> Power</a>
+              <ul class="superSub">
+                <li><a href="#">Log Off</a></li>
+                <li><a href="#">Shut Down</a></li>
+                <li><a href="#">Restart</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <div class="timer" id="timer"></div>
+      </nav>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
