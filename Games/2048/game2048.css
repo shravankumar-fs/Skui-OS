@@ -1,0 +1,47 @@
+:root {
+  --2048-bg: rgba(100, 100, 100, 1);
+}
+
+.g2048Window {
+  height: 440px;
+  width: 360px;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--2048-bg);
+  box-shadow: 0px 1px 15px rgba(0, 0, 0, 0.3);
+  font-family: "Orbitron", sans-serif;
+  position: absolute;
+}
+.g2048Toolbar {
+  height: 35px;
+  width: inherit;
+  background-color: steelblue;
+  letter-spacing: 1px;
+  text-align: center;
+  padding: 5px;
+  cursor: move;
+  display: flex;
+  justify-content: space-between;
+  color: white;
+}
+.g2048Stats {
+  height: 45px;
+  width: inherit;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Orbitron", sans-serif;
+  text-shadow: 2px 2px 10px black;
+}
+.g2048Container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: space-evenly;
+  height: 360px;
+  width: inherit;
+  background-color: var(--2048-bg);
+  padding: 5px;
+  cursor: pointer;
+}
