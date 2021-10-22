@@ -13,15 +13,16 @@
       referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="style.css" />
-    <link rel="icon" href="resources/icon.png" />
+    <link rel="icon" href="resources/rocketlogo.png" />
   </head>
   <body>
     <audio id="bomb" src="sounds/bomb.mp3"></audio>
     <audio id="click" src="sounds/click.mp3"></audio>
     <audio id="victory" src="sounds/victory.mp3"></audio>
     <script type="module" src="Browser/browser.js"></script>
-    <script type="module" src="MineSweeper/minesweeper.js"></script>
-    <script type="module" src="Paint/paint.js"></script>
+    <script type="module" src="Games/MineSweeper/minesweeper.js"></script>
+    <script type="module" src="Games/2048/game2048.js"></script>
+    <script type="module" src="Applications/Paint/paint.js"></script>
     <script type="module" src="script.js"></script>
 
     <div class="container" id="container">
@@ -50,7 +51,7 @@
               <a href="#"><i class="fas fa-gamepad"></i> Games</a>
               <ul class="superSub">
                 <li id="minesweeper"><a>Minesweeper</a></li>
-                <li><a href="#">2048</a></li>
+                <li id="game2048"><a>2048</a></li>
               </ul>
             </li>
             <li>
