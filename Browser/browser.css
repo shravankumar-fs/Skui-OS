@@ -1,0 +1,21 @@
+/** Browser Properties */
+.browserWindow {
+  height: 330px;
+  width: 80vw;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+}
+.bToolbar {
+  height: 30px;
+  background-color: steelblue;
+  width: 80vw;
+  display: flex;
+  justify-content: space-between;
+  cursor: move;
+}
+.browser {
+  background-color: white;
+  height: 300px;
+  width: 80vw;
+}
