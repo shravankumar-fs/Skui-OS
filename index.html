@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Shravan's OS UI</title>
+    <title>Shravan's Rocket OS UI</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
@@ -13,11 +13,20 @@
       referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="resources/icon.png" />
   </head>
-  <body oncontextmenu="return false">
+  <body>
+    <audio id="bomb" src="sounds/bomb.mp3"></audio>
+    <audio id="click" src="sounds/click.mp3"></audio>
+    <audio id="victory" src="sounds/victory.mp3"></audio>
+    <script type="module" src="Browser/browser.js"></script>
+    <script type="module" src="MineSweeper/minesweeper.js"></script>
+    <script type="module" src="Paint/paint.js"></script>
+    <script type="module" src="script.js"></script>
+
     <div class="container" id="container">
       <div class="arena" id="arena"></div>
-      <nav class="toolbar" id="toolbar">
+      <div class="taskbar" id="taskbar">
         <div class="main">
           <a id="start" href="#"><i class="fas fa-rocket"></i></a>
           <ul class="sub">
@@ -40,9 +49,8 @@
             <li>
               <a href="#"><i class="fas fa-gamepad"></i> Games</a>
               <ul class="superSub">
-                <li><a href="#">Solitaire</a></li>
-                <li><a href="#">Minsweeper</a></li>
-                <li><a href="#">Chess</a></li>
+                <li id="minesweeper"><a>Minesweeper</a></li>
+                <li><a href="#">2048</a></li>
               </ul>
             </li>
             <li>
@@ -56,8 +64,7 @@
           </ul>
         </div>
         <div class="timer" id="timer"></div>
-      </nav>
+      </div>
     </div>
-    <script src="script.js"></script>
   </body>
 </html>

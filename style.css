@@ -1,4 +1,9 @@
-@import url("https://fonts.googleapis.com/css?family=Heebo:300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Mulish&family=Orbitron:wght@600&display=swap");
+@import url("./browser/browser.css");
+@import url("./MineSweeper/minesweeper.css");
+@import url("./Paint/paint.css");
+@import url("util/ToolBar.css");
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -6,44 +11,39 @@
 }
 *,
 *:hover {
-  font-family: "Heebo", sans-serif;
-  transition: all 0.3s ease-in-out;
+  font-family: "Orbitron", sans-serif;
 }
 .container {
-  position: relative;
+  display: grid;
+  grid-template-rows: 1fr 50px;
+  grid-template-columns: 100%;
+  grid-template-areas:
+    "arena"
+    "taskbar";
   height: 100vh;
   width: 100vw;
   background-image: url("https://images.unsplash.com/photo-1634492599187-b89b0dfd1e50?ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDE2fENEd3V3WEpBYkV3fHxlbnwwfHx8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=960");
   background-repeat: no-repeat;
   background-size: cover;
 }
-
-.toolbar {
-  width: 100vw;
-  height: 50px;
-  position: absolute;
-  bottom: 0;
+.arena {
+  grid-area: arena;
+  display: flex;
+  align-items: space-evenly;
+  justify-content: space-evenly;
+}
+.taskbar {
+  grid-area: taskbar;
+  display: flex;
+  justify-content: space-between;
   background: linear-gradient(
     to bottom,
     rgba(56, 103, 141, 0.4),
     rgba(56, 150, 250, 0.4)
   );
 }
-.toolbar ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  white-space: nowrap;
-}
-.main {
-  position: relative;
-}
 .timer {
-  bottom: 0;
-  right: 0;
-  position: absolute;
   font-family: inherit;
-
   font-weight: bold;
   letter-spacing: 0.5px;
   font-size: 12px;
@@ -51,20 +51,31 @@
   align-items: center;
   justify-content: center;
   height: inherit;
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(255, 255, 255, 0.9);
   text-shadow: 1px 1px 12px black, -1px -1px 12px black;
 }
-.toolbar a {
+.taskbar > * {
+  z-index: 100;
+}
+.taskbar ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  white-space: nowrap;
+}
+.taskbar a {
   text-decoration: none;
   margin: 0;
   text-align: left;
   padding: 12px 15px 12px 15px;
-  background-color: rgba(57, 150, 255, 0.5);
-  font-size: 12px;
+  background-color: rgba(57, 150, 255, 0.8);
   color: white;
-  position: relative;
+  font-size: 10px;
+  letter-spacing: 1.4px;
+  /* position: relative; */
   display: block;
   width: 120px;
+  font-family: "Mulish", sans-serif;
 }
 #start {
   background: linear-gradient(to bottom, green, yellowgreen);
@@ -109,63 +120,44 @@
   font-size: 20px;
 }
 
-.toolbar .superSub a {
+.taskbar .superSub a {
   background-color: rgba(57, 150, 255, 0.5);
 }
-.toolbar li:hover > a {
+.taskbar li:hover > a {
   background-color: #2f95c8;
   cursor: pointer;
 }
-.toolbar .sub,
-.toolbar .superSub {
+.taskbar .sub,
+.taskbar .superSub {
   position: absolute;
   display: none;
 }
-.toolbar .main:hover .sub,
-.toolbar .sub > li:hover .superSub {
+.taskbar .main:hover .sub,
+.taskbar .sub > li:hover .superSub {
   display: block;
 }
 
-.toolbar .sub {
+.taskbar .sub {
   position: absolute;
   bottom: 50px;
   left: 0;
 }
-.toolbar .sub > li {
+.taskbar .sub > li {
   position: relative;
 }
-.toolbar .superSub {
+.taskbar .superSub {
   position: absolute;
   left: 120px;
   bottom: -1px;
 }
 
-.toolbar .sub li {
+.taskbar .sub li {
   position: relative;
   border-top: 1px solid #575f6a;
   border-bottom: 1px solid #6b727c;
   border-left: 0.7px solid rgba(0, 0, 0, 0.9);
 }
-/** Browser Properties */
-.browserWindow {
-  height: 330px;
-  width: 80vw;
-  display: flex;
-  flex-direction: column;
-}
-.bToolbar {
-  height: 30px;
-  background-color: steelblue;
-  width: 80vw;
-  flex: auto 1;
-  display: flex;
-  justify-content: flex-end;
-}
-.browser {
-  background-color: white;
-  height: 300px;
-  width: 80vw;
-}
+
 .close {
   background: radial-gradient(red, darkred);
   width: 23px;
@@ -176,44 +168,11 @@
   border-radius: 50%;
   border: none;
   margin: 2px;
+  cursor: pointer;
+  right: 2px;
+  position: absolute;
 }
-/** Paint*/
 
-.paintWindow {
-  height: 360px;
-  width: 450px;
-  display: flex;
-  flex-direction: column;
-  box-shadow: 0px 1px 15px rgba(0, 0, 0, 0.5);
-}
-.paintCanvas {
-  background-color: white;
-}
-.paintToolbar,
-.paintToolBox {
-  display: flex;
-  justify-content: left;
-  align-items: center;
-  height: 35px;
-  width: inherit;
-  background-color: steelblue;
-}
-.paintToolBox > * {
-  margin: 0 15px 0 15px;
-}
-#color {
-  border: none;
-}
-.paintButton {
-  height: 25px;
-  width: 25px;
-  border-radius: 50%;
-  border: none;
-}
-#clear {
-  color: red;
-  font-weight: bold;
-}
 button:active {
   transform: scale(0.98);
 }
