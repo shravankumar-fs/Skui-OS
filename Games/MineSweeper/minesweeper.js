@@ -105,12 +105,12 @@ function checkGameWin() {
       let container = document.getElementById("mineContainer");
       let it = document.createElement("div");
       it.innerHTML = `<div>You Won!</div>
-          <button class="retry" id="retry"><i class="fas fa-redo"></i></button>
+          <button class="retryMS" id="retryMS"><i class="fas fa-redo"></i></button>
       `;
       container.appendChild(it);
       clearInterval(timerInterval);
       it.classList = ["gameOver"];
-      document.getElementById("retry").addEventListener("click", () => {
+      document.getElementById("retryMS").addEventListener("click", () => {
         document.getElementById("mineWindow").remove();
         initMineSweeperBoard();
       });
