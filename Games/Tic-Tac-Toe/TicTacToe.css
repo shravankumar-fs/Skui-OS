@@ -1,0 +1,179 @@
+:root {
+  --ttt-bg: white;
+  --ttt-sq-bg: #ede474;
+  --ttt-sq-bg-marked: white;
+  --ttt-sq-fg-marked: steelblue;
+  --ttt-sq-bg-markedPC: steelblue;
+  --ttt-sq-fg-markedPC: white;
+  --ttt-sq-bg-hover: steelblue;
+}
+
+.TicTacToeWindow {
+  height: 335px;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--ttt-bg);
+  box-shadow: 0px 1px 15px rgba(0, 0, 0, 0.3);
+  font-family: "Orbitron", sans-serif;
+  position: absolute;
+}
+.TicTacToeToolbar {
+  height: 35px;
+  width: inherit;
+  background-color: steelblue;
+  letter-spacing: 1px;
+  text-align: center;
+  padding: 5px;
+  cursor: move;
+  display: flex;
+  justify-content: space-between;
+  color: white;
+}
+
+.TicTacToeContainer {
+  display: flex;
+  flex-wrap: wrap;
+
+  height: 300px;
+  width: inherit;
+  background-color: var(--ttt-bg);
+  padding: 20px;
+  cursor: pointer;
+}
+.center {
+  height: 10px;
+  width: 10px;
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: black;
+  z-index: 0;
+  box-shadow: 1px 1px 50px 50px rgba(50, 50, 230, 0.7);
+}
+.squareTTT,
+.squareTTTMarked,
+.squareTTTMarkedPC {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+  width: 80px;
+  margin-left: 6px;
+  z-index: 1;
+  font-size: 30px;
+}
+.squareTTT {
+  background: var(--ttt-sq-bg);
+  cursor: crosshair;
+}
+.squareTTTMarked {
+  background: var(--ttt-sq-bg-marked);
+  color: var(--ttt-sq-fg-marked);
+  cursor: not-allowed;
+}
+.squareTTTMarkedPC {
+  background: var(--ttt-sq-bg-markedPC);
+  color: var(--ttt-sq-fg-markedPC);
+  cursor: not-allowed;
+}
+.squareTTTMarkedPC:hover,
+.squareTTTMarked:hover {
+  background: grey;
+  cursor: not-allowed;
+}
+.squareTTT:hover {
+  animation: sqTTTHover 0.3s;
+}
+@keyframes sqTTTHover {
+  0% {
+    background: linear-gradient(
+      -45deg,
+      var(--ttt-sq-bg-hover) 10%,
+      white 20%,
+      var(--ttt-sq-bg-hover) 30%
+    );
+  }
+  25% {
+    background: linear-gradient(
+      -45deg,
+      var(--ttt-sq-bg-hover) 30%,
+      white 40%,
+      var(--ttt-sq-bg-hover) 50%
+    );
+  }
+  50% {
+    background: linear-gradient(
+      -45deg,
+      var(--ttt-sq-bg-hover) 45%,
+      white 55%,
+      var(--ttt-sq-bg-hover) 65%
+    );
+  }
+  75% {
+    background: linear-gradient(
+      -45deg,
+      var(--ttt-sq-bg-hover) 60%,
+      white 70%,
+      var(--ttt-sq-bg-hover) 80%
+    );
+  }
+  100% {
+    background: linear-gradient(
+      -45deg,
+      var(--ttt-sq-bg-hover) 80%,
+      white 90%,
+      var(--ttt-sq-bg-hover) 100%
+    );
+  }
+}
+.result {
+  height: 300px;
+  width: 300px;
+  position: absolute;
+  top: 55.2%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 2;
+  color: white;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.retryTTT {
+  margin-top: 10px;
+  border: 0;
+  background-color: yellowgreen;
+  border-radius: 50%;
+  padding: 10px;
+  font-weight: 900;
+}
+.retryTTT:hover {
+  animation: colorRetryTTT 0.3s;
+  cursor: pointer;
+  font-weight: 900;
+}
+.retryTTT:active {
+  transform: scale(0.9);
+}
+@keyframes colorRetryTTT {
+  0% {
+    background: linear-gradient(-45deg, green 30%, white 40%, darkgreen 50%);
+  }
+  25% {
+    background: linear-gradient(-45deg, green 40%, white 50%, darkgreen 60%);
+  }
+  50% {
+    background: linear-gradient(-45deg, green 45%, white 55%, darkgreen 65%);
+  }
+  75% {
+    background: linear-gradient(-45deg, green 50%, white 60%, darkgreen 70%);
+  }
+  100% {
+    background: linear-gradient(-45deg, green 60%, white 70%, darkgreen 80%);
+  }
+}
