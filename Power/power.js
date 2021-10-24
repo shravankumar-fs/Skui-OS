@@ -30,6 +30,9 @@ restart.addEventListener("click", () => {
   makeOverLay();
   closeAllApplications();
   setTimeout(() => {
+    document.getElementById("alert").play();
+  }, 2000);
+  setTimeout(() => {
     removeOverLay();
-  }, 3000);
+  }, 4000);
 });

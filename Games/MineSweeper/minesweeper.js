@@ -5,7 +5,7 @@ const minesweeper = document.getElementById("minesweeper");
 const arena = document.getElementById("arena");
 let title = "MineSweeper";
 minesweeper.addEventListener("click", () => {
-  initMineSweeperBoard();
+  if (!document.getElementById("mineWindow")) initMineSweeperBoard();
 });
 
 let mines;
