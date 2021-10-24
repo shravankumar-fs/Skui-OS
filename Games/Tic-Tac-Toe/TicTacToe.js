@@ -145,4 +145,6 @@ function createTicTacToe() {
   fillContainer();
 }
 
-document.getElementById("tictactoe").addEventListener("click", createTicTacToe);
+document.getElementById("tictactoe").addEventListener("click", () => {
+  if (!document.getElementById("TicTacToeWindow")) createTicTacToe();
+});
