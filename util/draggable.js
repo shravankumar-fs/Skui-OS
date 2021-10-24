@@ -41,6 +41,6 @@ export function dragElement(element, header) {
     for (let i = 0; i < allNodes.length; i++) {
       allNodes[i].style.zIndex = 1;
     }
-    element.style.zIndex = 2;
+    element.style.zIndex = 4;
   }
 }
