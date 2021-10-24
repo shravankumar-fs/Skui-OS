@@ -4,6 +4,7 @@
 @import url("./Games//Tic-Tac-Toe/TicTacToe.css");
 @import url("./Applications/Paint/paint.css");
 @import url("util/ToolBar.css");
+@import url("Power/power.css");
 
 * {
   box-sizing: border-box;
