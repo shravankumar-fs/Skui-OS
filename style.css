@@ -5,7 +5,9 @@
 @import url("./Applications/Paint/paint.css");
 @import url("util/ToolBar.css");
 @import url("Power/power.css");
-
+@import url("util/BackgroundPicChanger.css");
+@import url("Applications/notepad/notepad.css");
+@import url("util/NotImplemented.css");
 * {
   box-sizing: border-box;
   margin: 0;
@@ -70,7 +72,8 @@
   margin: 0;
   text-align: left;
   padding: 12px 15px 12px 15px;
-  background-color: rgba(57, 150, 255, 0.8);
+  /* background-color: rgba(57, 150, 255, 0.8); */
+  background-color: rgba(57, 150, 255, 0.5);
   color: white;
   font-size: 10px;
   letter-spacing: 1.4px;
@@ -78,6 +81,8 @@
   display: block;
   width: 120px;
   font-family: "Mulish", sans-serif;
+  border-radius: 10px;
+  border: none;
 }
 #start {
   background: linear-gradient(to bottom, green, yellowgreen);
@@ -86,10 +91,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  border-top-right-radius: 30px;
+  border-top-right-radius: 10px;
   font-size: 20px;
 }
-.start:hover::after {
+/* .start:hover::after {
   font-family: "Font Awesome 5 Free";
   content: "\f135";
   font-weight: 900;
@@ -120,7 +125,7 @@
   justify-content: center;
   border-top-right-radius: 0px;
   font-size: 20px;
-}
+} */
 
 .taskbar .superSub a {
   background-color: rgba(57, 150, 255, 0.5);
@@ -155,9 +160,7 @@
 
 .taskbar .sub li {
   position: relative;
-  border-top: 1px solid #575f6a;
-  border-bottom: 1px solid #6b727c;
-  border-left: 0.7px solid rgba(0, 0, 0, 0.9);
+  margin-top: 1px;
 }
 
 .close {
@@ -171,10 +174,35 @@
   border: none;
   margin: 2px;
   cursor: pointer;
-  right: 2px;
-  position: absolute;
 }
 
 button:active {
   transform: scale(0.98);
+}
+.RClickMenu {
+  padding: 10px 4px;
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  align-items: left;
+  background-color: rgba(57, 150, 255, 0.5);
+  color: white;
+  font-size: 10px;
+  letter-spacing: 1.4px;
+  height: 80px;
+  border-radius: 10px;
+  font-family: "Mulish", sans-serif;
+}
+.RClickMenu .mOption {
+  padding: 4px;
+  cursor: pointer;
+  border-radius: 2px;
+  border-bottom: 0.1px solid rgba(0, 0, 0, 0.3);
+  font-family: "Mulish", sans-serif;
+}
+.RClickMenu .mOption:last-child {
+  border-bottom: none;
+}
+.RClickMenu .mOption:hover {
+  background-color: rgba(37, 100, 255, 0.8);
 }
