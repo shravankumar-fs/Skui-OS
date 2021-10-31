@@ -17,6 +17,7 @@
   box-shadow: 0px 1px 15px rgba(0, 0, 0, 0.3);
   font-family: "Orbitron", sans-serif;
   position: absolute;
+  z-index: 1;
 }
 .TicTacToeToolbar {
   height: 35px;
@@ -49,7 +50,7 @@
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: black;
-  z-index: 0;
+  z-index: 1;
   box-shadow: 1px 1px 50px 50px rgba(50, 50, 230, 0.7);
 }
 .squareTTT,
@@ -61,7 +62,7 @@
   height: 80px;
   width: 80px;
   margin-left: 6px;
-  z-index: 1;
+  z-index: 2;
   font-size: 30px;
 }
 .squareTTT {
@@ -128,7 +129,7 @@
     );
   }
 }
-.result {
+.resultTTT {
   height: 300px;
   width: 300px;
   position: absolute;
