@@ -4,10 +4,12 @@ const arena = document.getElementById("arena");
 const notepad = document.getElementById("notepad");
 
 const notes = JSON.parse(localStorage.getItem("notes"));
-
+let text = "";
 if (notes) {
   notes.forEach((note) => {
-    if (note != "") addNewNote(note);
+    if (note != "") {
+      text = note;
+    }
   });
 }
 
@@ -20,26 +22,21 @@ window.onload = () => {
   });
 };
 
-function addNewNote(text = "") {
+function addNewNote() {
   const note = document.createElement("div");
   note.classList.add("note");
   note.id = "notePadNote";
   /**ToolBar */
-  const noteToolBar = buildToolBar(
-    note,
-    "noteToolBar",
-    "noteToolBar",
-    "Notepad"
-  );
+  const noteToolBar = buildToolBar(note, "noteToolBar", "noteToolBar", "Notes");
   /**Tools */
   const tools = document.createElement("div");
   tools.classList.add("tools");
   const editBtn = document.createElement("button");
   editBtn.classList.add("edit");
-  editBtn.innerHTML = `<i class="fas fa-edit"></i>`;
+  editBtn.innerHTML = `Edit <i class="fas fa-edit"></i>`;
   const deleteBtn = document.createElement("button");
   deleteBtn.classList.add("delete");
-  deleteBtn.innerHTML = `<i class="fas fa-trash"></i>`;
+  deleteBtn.innerHTML = `Clear <i class="fas fa-trash"></i>`;
 
   tools.appendChild(editBtn);
   tools.appendChild(deleteBtn);
@@ -65,7 +62,8 @@ function addNewNote(text = "") {
   deleteBtn.addEventListener("click", () => {
     textarea.value = ``;
     main.innerHTML = ``;
-    updateLS();
+    text = ``;
+    clearLS();
   });
 
   editBtn.addEventListener("click", () => {
@@ -79,7 +77,10 @@ function addNewNote(text = "") {
     updateLS();
   });
 
-  dragElement(note, noteToolBar);
+  dragElement(
+    document.getElementById("notePadNote"),
+    document.getElementById("noteToolBar")
+  );
 }
 
 function updateLS() {
@@ -90,4 +91,8 @@ function updateLS() {
   notesText.forEach((note) => notes.push(note.value));
 
   localStorage.setItem("notes", JSON.stringify(notes));
+}
+
+function clearLS() {
+  localStorage.removeItem("notes");
 }

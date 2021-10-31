@@ -101,7 +101,7 @@ const markIt = (square) => {
 const declareResult = (resultString) => {
   document.querySelector(".center").remove();
   const resOverLay = document.createElement("div");
-  resOverLay.classList.add("result");
+  resOverLay.classList.add("resultTTT");
   resOverLay.innerHTML = `<div>${resultString}</div>
   <button class="retryTTT" id="retryTTT"><i class="fas fa-redo"></i></button>`;
   document.getElementById("TicTacToeWindow").appendChild(resOverLay);

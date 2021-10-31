@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Mulish&family=Orbitron:wght@600&display=swap");
-@import url("./browser/browser.css");
+@import url("./Browser/browser.css");
 @import url("./Games/MineSweeper/minesweeper.css");
 @import url("./Games//Tic-Tac-Toe/TicTacToe.css");
 @import url("./Applications/Paint/paint.css");
@@ -12,10 +12,12 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-}
-*,
-*:hover {
   font-family: "Orbitron", sans-serif;
+}
+body {
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
 }
 .container {
   display: grid;
