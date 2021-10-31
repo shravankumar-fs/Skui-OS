@@ -13,22 +13,33 @@
       referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="style.css" />
-    <link rel="icon" href="resources/icon.png" />
+    <link rel="icon" href="resources/rocketlogo.png" />
   </head>
   <body>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/marked/3.0.8/marked.min.js"
+      integrity="sha512-OA0KzIFyfjEiECfdTeeqyDa++XmSLWyIBr8bWf2lpdv3qNr2TxpR9uaL2fKaz/Nz35kVVPEagjhWdWat/khWXw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
     <audio id="bomb" src="sounds/bomb.mp3"></audio>
     <audio id="click" src="sounds/click.mp3"></audio>
     <audio id="victory" src="sounds/victory.mp3"></audio>
+    <audio id="alert" src="sounds/alert.mp3"></audio>
     <script type="module" src="Browser/browser.js"></script>
-    <script type="module" src="MineSweeper/minesweeper.js"></script>
-    <script type="module" src="Paint/paint.js"></script>
+    <script type="module" src="Games/MineSweeper/minesweeper.js"></script>
+    <script type="module" src="Games/Tic-Tac-Toe/TicTacToe.js"></script>
+    <script type="module" src="Applications/Paint/paint.js"></script>
+    <script type="module" src="Applications/notepad/notepad.js"></script>
+    <script type="module" src="Power/power.js"></script>
+    <script type="module" src="util/BackgroundPicChanger.js"></script>
+    <script type="module" src="util/NotImplemented.js"></script>
     <script type="module" src="script.js"></script>
-
     <div class="container" id="container">
       <div class="arena" id="arena"></div>
       <div class="taskbar" id="taskbar">
         <div class="main">
-          <a id="start" href="#"><i class="fas fa-rocket"></i></a>
+          <a id="start"><i class="fas fa-rocket"></i></a>
           <ul class="sub">
             <li>
               <a href="#"><i class="fas fa-user"></i> User</a>
@@ -39,26 +50,25 @@
             <li>
               <a href="#"><i class="fas fa-columns"></i> Applications</a>
               <ul class="superSub">
-                <li><a href="#">Notepad</a></li>
+                <li id="notepad"><a>Notepad</a></li>
                 <li id="paint"><a>Paint</a></li>
-                <li><a href="#">Word</a></li>
-                <li><a href="#">Presentation</a></li>
-                <li><a href="#">Excel</a></li>
+                <li class="notImplemented"><a href="#">Word</a></li>
+                <li class="notImplemented"><a href="#">Presentation</a></li>
+                <li class="notImplemented"><a href="#">Excel</a></li>
               </ul>
             </li>
             <li>
-              <a href="#"><i class="fas fa-gamepad"></i> Games</a>
+              <a><i class="fas fa-gamepad"></i> Games</a>
               <ul class="superSub">
                 <li id="minesweeper"><a>Minesweeper</a></li>
-                <li><a href="#">2048</a></li>
+                <li id="tictactoe"><a>Tic Tac Toe</a></li>
               </ul>
             </li>
             <li>
-              <a href="#"><i class="fas fa-power-off"></i> Power</a>
+              <a><i class="fas fa-power-off"></i> Power</a>
               <ul class="superSub">
-                <li><a href="#">Log Off</a></li>
-                <li><a href="#">Shut Down</a></li>
-                <li><a href="#">Restart</a></li>
+                <li id="sys-shutdown"><a>Shut Down</a></li>
+                <li id="sys-restart"><a>Restart</a></li>
               </ul>
             </li>
           </ul>

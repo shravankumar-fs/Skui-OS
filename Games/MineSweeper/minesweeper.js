@@ -1,11 +1,11 @@
-import { dragElement } from "../util/draggable.js";
-import { buildToolBar } from "../util/ToolBar.js";
+import { dragElement } from "../../util/draggable.js";
+import { buildToolBar } from "../../util/ToolBar.js";
 
 const minesweeper = document.getElementById("minesweeper");
 const arena = document.getElementById("arena");
 let title = "MineSweeper";
 minesweeper.addEventListener("click", () => {
-  initMineSweeperBoard();
+  if (!document.getElementById("mineWindow")) initMineSweeperBoard();
 });
 
 let mines;
@@ -39,7 +39,7 @@ function generateMineWindow() {
   return mineWindow;
 }
 function generateMineToolbar(mineWindow) {
-  return buildToolBar(mineWindow, "mineToolbar", "mineToolbar", "MineSweeper");
+  return buildToolBar(mineWindow, "mineToolbar", "mineToolbar", title);
 }
 function generateMineTimer() {
   const mineTimer = document.createElement("div");
@@ -105,12 +105,12 @@ function checkGameWin() {
       let container = document.getElementById("mineContainer");
       let it = document.createElement("div");
       it.innerHTML = `<div>You Won!</div>
-          <button class="retry" id="retry"><i class="fas fa-redo"></i></button>
+          <button class="retryMS" id="retryMS"><i class="fas fa-redo"></i></button>
       `;
       container.appendChild(it);
       clearInterval(timerInterval);
       it.classList = ["gameOver"];
-      document.getElementById("retry").addEventListener("click", () => {
+      document.getElementById("retryMS").addEventListener("click", () => {
         document.getElementById("mineWindow").remove();
         initMineSweeperBoard();
       });

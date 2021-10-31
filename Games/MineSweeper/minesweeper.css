@@ -142,18 +142,19 @@
   color: white;
   text-shadow: 0px 2px 6px black;
 }
-.retry {
+.retryMS {
   margin-top: 10px;
   border: 0;
   background-color: green;
   border-radius: 50%;
   padding: 10px;
 }
-.retry:hover {
+.retryMS:hover {
   animation: colorRetry 0.3s;
+  cursor: pointer;
 }
-.retry:active {
-  transform: scale(0.98);
+.retryMS:active {
+  transform: scale(0.9);
 }
 @keyframes colorRetry {
   0% {
