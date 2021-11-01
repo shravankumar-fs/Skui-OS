@@ -127,7 +127,7 @@ function verifyIfBomb(el) {
       let container = document.getElementById("mineContainer");
       let it = document.createElement("div");
       it.innerHTML = `<div>Game Over</div>
-        <button class="retry" id="retry"><i class="fas fa-redo"></i></button>
+        <button class="retryMS" id="retry"><i class="fas fa-redo"></i></button>
         `;
       container.appendChild(it);
       clearInterval(timerInterval);
