@@ -1,0 +1,193 @@
+@import url("https://fonts.googleapis.com/css2?family=Orbitron&family=Poppins&display=swap");
+:root {
+  --userCard-bg: rgba(0, 0, 145, 0.7);
+  --userCard-bg-black: rgba(0, 0, 0, 0.7);
+}
+
+.user-card {
+  letter-spacing: 1px;
+  font-family: "Poppins", sans-serif;
+  align-self: center;
+  height: 600px;
+  width: 600px;
+  background-color: var(--userCard-bg);
+  border-radius: 20px;
+  display: grid;
+  grid-template-rows: 35px 265px 30px 180px 60px 30px;
+  grid-template-columns: 30px 540px 30px;
+  grid-template-areas:
+    "toolbar toolbar toolbar"
+    ". main ."
+    ". . ."
+    ". details ."
+    ". contact ."
+    ". . .";
+  position: absolute;
+}
+.user-card > * {
+  font-family: "Poppins", sans-serif;
+}
+.user-overview {
+  grid-area: main;
+  display: flex;
+  align-items: flex-end;
+  font-family: "Poppins", sans-serif;
+}
+.user-spacer {
+  display: flex;
+  align-items: center;
+}
+.userCardToolbar {
+  grid-area: toolbar;
+  background: steelblue;
+  /* height: 35px; */
+  width: inherit;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: move;
+}
+.user-tagline {
+  margin-left: 20px;
+  font-size: 14px;
+  font-weight: 900;
+  color: white;
+}
+.user-tagline > * {
+  text-shadow: 0 0 10px var(--userCard-bg-black);
+  font-family: "Poppins", sans-serif;
+}
+.user-image {
+  background-image: url("../../resources/SK.jpg");
+  background-size: cover;
+  height: 100px;
+  width: 100px;
+  background-position: center;
+  border-radius: 50%;
+  box-shadow: 0 0 10px 5px var(--userCard-bg-black);
+}
+.user-details {
+  grid-area: details;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 11px;
+  color: white;
+}
+.user-details > * {
+  background-color: var(--userCard-bg-black);
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.user-workExp,
+.user-skills,
+.user-education,
+.user-works {
+  width: 100px;
+  position: relative;
+  padding-top: 20px;
+  font-family: "Poppins", sans-serif;
+}
+.user-skills::before,
+.user-education::before,
+.user-works::before,
+.user-workExp::before {
+  position: absolute;
+  background-color: steelblue;
+  width: inherit;
+  top: 0;
+  left: 0;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  height: 20px;
+  text-align: center;
+}
+
+.user-skills::before {
+  content: "Skills";
+}
+.user-education::before {
+  content: "Education";
+}
+.user-works::before {
+  content: "Works";
+}
+.user-workExp::before {
+  content: " Experience";
+}
+
+.user-skills {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.user-skills i {
+  font-size: 18px;
+  height: 30px;
+  width: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  margin: 5px;
+  border-radius: 5px;
+}
+.user-education {
+  width: 100px;
+}
+
+.user-works a:hover {
+  color: green;
+  font-family: "Poppins", sans-serif;
+}
+.user-works a::before {
+  content: "\f06d ";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 600;
+  color: red;
+}
+
+.user-contact {
+  grid-area: contact;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  background-color: var(--userCard-bg-black);
+  width: 250px;
+  place-self: center;
+}
+
+.user-contact i {
+  margin: 10px 20px;
+  font-size: 20px;
+}
+
+.user-card a {
+  text-decoration: none;
+  color: white;
+}
+.user-works a {
+  color: yellow;
+  font-family: "Poppins", sans-serif;
+}
+.user-contact i:hover {
+  color: greenyellow;
+}
+.user-education > * {
+  position: relative;
+  font-family: "Poppins", sans-serif;
+}
+.user-education > *::before {
+  font-family: "Poppins", sans-serif;
+  content: "";
+  height: 15px;
+  width: 10px;
+  background: linear-gradient(to right, black, rgba(0, 0, 0, 0.3));
+  position: absolute;
+  left: -2px;
+  top: 0px;
+  opacity: 0.3;
+}
