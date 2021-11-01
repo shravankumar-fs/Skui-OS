@@ -21,7 +21,12 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
-
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.6.0/chart.min.js"
+      integrity="sha512-GMGzUEevhWh8Tc/njS0bDpwgxdCJLQBWG3Z2Ct+JGOpVnEmjvNx6ts4v6A2XJf1HOrtOsfhv3hBKpK9kE5z8AQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
     <audio id="bomb" src="sounds/bomb.mp3"></audio>
     <audio id="click" src="sounds/click.mp3"></audio>
     <audio id="victory" src="sounds/victory.mp3"></audio>
@@ -40,6 +45,8 @@
     <script type="module" src="util/BackgroundPicChanger.js"></script>
     <script type="module" src="util/NotImplemented.js"></script>
 
+    <script type="module" src="Applications/User-Info/user-info.js"></script>
+
     <script type="module" src="script.js"></script>
 
     <div class="container" id="container">
@@ -48,8 +55,8 @@
         <div class="main">
           <a id="start"><i class="fas fa-rocket"></i></a>
           <ul class="sub">
-            <li>
-              <a href="#"><i class="fas fa-user"></i> User</a>
+            <li id="userCardTrigger">
+              <a><i class="fas fa-user"></i> User</a>
             </li>
             <li id="browser">
               <a><i class="fab fa-firefox"></i>&nbsp;Browser</a>

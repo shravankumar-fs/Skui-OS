@@ -8,6 +8,8 @@
 @import url("./Power/power.css");
 @import url("./util/BackgroundPicChanger.css");
 @import url("./util/NotImplemented.css");
+@import url("./Applications/activity-monitor/activity.css");
+@import url("./Applications/User-Info/user-info.css");
 * {
   box-sizing: border-box;
   margin: 0;
