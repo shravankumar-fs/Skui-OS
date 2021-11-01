@@ -33,12 +33,14 @@
   padding: 15px;
   font-family: "Mulish", sans-serif;
   text-shadow: none;
+  cursor: pointer;
 }
 .customDialog button i {
   color: orange;
 }
 .customDialog button:hover {
   animation: flame 0.1s linear;
+  cursor: pointer;
 }
 @keyframes flame {
   0% {
