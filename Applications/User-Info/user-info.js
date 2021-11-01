@@ -16,9 +16,9 @@ let skillArr = [
 ];
 
 let contacts = [
-  `<a href="https://www.linkedin.com/in/shravan-kumar-udupa/"><i class="fab fa-linkedin"></i></a>`,
-  `<a href="https://twitter.com/shravankumarui"><i class="fab fa-twitter-square"></i></a>`,
-  `<a href="mailto:shravankumar.udupa@gmail.com"><i class="fab fa-facebook-square"></i></a>`,
+  `<a target="_blank"  href="https://www.linkedin.com/in/shravan-kumar-udupa/"><i class="fab fa-linkedin"></i></a>`,
+  `<a target="_blank" href="https://twitter.com/shravankumarui"><i class="fab fa-twitter-square"></i></a>`,
+  `<a target="_blank" href="mailto:shravankumar.udupa@gmail.com"><i class="fas fa-envelope"></i></a>`,
 ];
 
 let contactClasses = ["linked-in", "twitter", "gmail"];
