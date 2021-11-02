@@ -88,7 +88,7 @@ function createUserDetails() {
   skillArr.forEach((arr) => {
     if (arr[0] === "fab fa-docker") {
       const sp = document.createElement("span");
-      sp.innerHTML = `<img src="../../resources/threejs.jpg"/>
+      sp.innerHTML = `<img src="resources/threejs.jpg"/>
                 <span class="tooltip">${arr[2]}</span>
       `;
 
