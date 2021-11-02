@@ -86,7 +86,7 @@
 .user-works {
   width: 100px;
   position: relative;
-  padding-top: 20px;
+  padding-top: 30px;
   font-family: "Poppins", sans-serif;
 }
 .user-skills::before,
@@ -100,21 +100,23 @@
   left: 0;
   border-top-right-radius: 10px;
   border-top-left-radius: 10px;
-  height: 20px;
-  text-align: center;
+  height: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .user-skills::before {
-  content: "Skills";
+  content: "Major Skills";
 }
 .user-education::before {
-  content: "Education";
+  content: "Academics";
 }
 .user-works::before {
-  content: "Works";
+  content: "Sample Works";
 }
 .user-workExp::before {
-  content: " Experience";
+  content: "Experience";
 }
 
 .user-skills {
@@ -133,6 +135,38 @@
   padding: 5px;
   margin: 5px;
   border-radius: 5px;
+}
+.user-skills img {
+  height: 30px;
+  width: 30px;
+  margin: 5px;
+  border-radius: 5px;
+}
+.user-skills > * {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+.user-skills > * .tooltip {
+  visibility: hidden;
+  width: 100px;
+  background-color: var(--userCard-bg-black);
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  font-family: "Poppins", sans-serif;
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -60px;
+  cursor: pointer;
+}
+
+.user-skills > *:hover .tooltip {
+  visibility: visible;
 }
 .user-education {
   width: 100px;
