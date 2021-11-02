@@ -2,17 +2,25 @@ import { dragElement } from "../../util/draggable.js";
 import { buildToolBar } from "../../util/ToolBar.js";
 
 let tagLines = [
-  "I'm a Full Stack Developer based in India.",
-  "I love exploring three.js",
+  "I'm a Full Stack Developer from India",
+  "I love exploring three.js and 3D Web Animations",
 ];
 
 let skillArr = [
-  ["fab fa-js", "background-color: yellow; color: black"],
-  ["fab fa-html5", "background-color: orange; color: white"],
-  ["fab fa-css3-alt", "background-color: skyblue; color: white"],
-  ["fab fa-angular", "background-color: red; color: white"],
-  ["fab fa-java", "background-color: white; color: blue"],
-  ["fab fa-docker", "background-color: white; color: skyblue"],
+  ["fab fa-js", "background-color: yellow; color: black", "Javascript"],
+  ["fab fa-angular", "background-color: red; color: white", "Angular"],
+  ["fab fa-docker", "background-color: white; color: skyblue", "THREEJS"],
+  [
+    "fab fa-html5",
+    "background: linear-gradient(to right,orange 50%,red 100%); color: white",
+    "HTML",
+  ],
+  [
+    "fab fa-css3-alt",
+    "background: linear-gradient(to right,lightskyblue 50%,skyblue 100%); color: white",
+    "CSS3",
+  ],
+  ["fab fa-java", "background-color: white; color: blue", "Java"],
 ];
 
 let contacts = [
@@ -78,10 +86,28 @@ function createUserDetails() {
   userSkills.classList.add("user-skills");
 
   skillArr.forEach((arr) => {
-    const skillIcon = document.createElement("i");
-    arr[0].split(" ").forEach((cls) => skillIcon.classList.add(cls));
-    skillIcon.style = arr[1];
-    userSkills.appendChild(skillIcon);
+    if (arr[0] === "fab fa-docker") {
+      const sp = document.createElement("span");
+      sp.innerHTML = `<img src="../../resources/threejs.jpg"/>
+                <span class="tooltip">${arr[2]}</span>
+      `;
+
+      userSkills.appendChild(sp);
+    } else {
+      const sp = document.createElement("span");
+
+      const skillIcon = document.createElement("i");
+      arr[0].split(" ").forEach((cls) => skillIcon.classList.add(cls));
+      skillIcon.style = arr[1];
+
+      const toolTip = document.createElement("span");
+      toolTip.classList.add("tooltip");
+      toolTip.innerText = arr[2];
+
+      sp.appendChild(skillIcon);
+      sp.appendChild(toolTip);
+      userSkills.appendChild(sp);
+    }
   });
 
   const userWorks = document.createElement("div");
