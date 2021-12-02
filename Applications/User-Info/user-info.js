@@ -26,7 +26,7 @@ let skillArr = [
 let contacts = [
   `<a target="_blank"  href="https://www.linkedin.com/in/shravan-kumar-udupa/"><i class="fab fa-linkedin"></i></a>`,
   `<a target="_blank" href="https://twitter.com/shravankumarui"><i class="fab fa-twitter-square"></i></a>`,
-  `<a target="_blank" href="mailto:shravankumar.udupa@gmail.com"><i class="fas fa-envelope"></i></a>`,
+  `<a target="_blank" href="mailto:shravankumar.fs.dev@gmail.com"><i class="fas fa-envelope"></i></a>`,
 ];
 
 let contactClasses = ["linked-in", "twitter", "gmail"];
@@ -40,6 +40,7 @@ function createCard() {
   const userCard = document.createElement("div");
   userCard.classList.add("user-card");
   userCard.id = "user-card";
+
   userCard.appendChild(
     buildToolBar(
       userCard,
@@ -51,6 +52,7 @@ function createCard() {
   userCard.appendChild(createUserOverView());
   userCard.appendChild(createUserDetails());
   userCard.appendChild(createUserContact());
+
   arena.appendChild(userCard);
   dragElement(userCard, document.getElementById("userCardToolbar"));
 }
@@ -68,6 +70,7 @@ function createUserOverView() {
   for (let tag of tagLines) {
     const el = document.createElement("div");
     el.innerHTML = tag;
+    el.classList.add("userTagLineEl");
     userTagLine.appendChild(el);
   }
   userSpacer.appendChild(userImage);
@@ -132,7 +135,7 @@ function createUserDetails() {
   const userWorkExp = document.createElement("div");
   userWorkExp.classList.add("user-workExp");
   userWorkExp.innerHTML = `
-  7+ years Software development Experience
+  6+ years Software development Experience
   `;
 
   userDetails.appendChild(userSkills);

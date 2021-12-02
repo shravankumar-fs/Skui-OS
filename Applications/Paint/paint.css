@@ -24,6 +24,10 @@
   display: flex;
   justify-content: space-between;
   cursor: move;
+  background: linear-gradient(skyblue, steelblue, skyblue);
+  padding: 2px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
 }
 .paintToolBox > * {
   margin: 0 15px 0 15px;

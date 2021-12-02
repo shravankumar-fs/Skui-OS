@@ -6,19 +6,32 @@
   position: absolute;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: space-around;
   align-items: center;
   font-family: "Orbitron", sans-serif;
 }
 .messagePower {
   color: steelblue;
-  font-size: 24px;
+  font-size: 30px;
   margin-top: 100px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+.messagePowerActive {
+  color: white;
+  text-shadow: 1px 1px 6px lavender;
+  font-size: 30px;
+  font-weight: 700;
+  margin-top: 100px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
 }
 .leafPower {
-  height: 40px;
-  width: 40px;
-  background-color: green;
+  height: 60px;
+  width: 60px;
+  font-size: 30px;
+  padding: 5px;
+  background: radial-gradient(green, lightgreen, green);
   font-weight: 600;
   color: white;
   display: flex;
@@ -41,6 +54,7 @@
   justify-content: center;
   align-items: center;
   margin-top: 100px;
+  justify-self: end;
 }
 
 .turnOnPower:active {
@@ -48,14 +62,16 @@
   color: white;
   transform: scale(0.98);
 }
+
 @keyframes leaf-animate {
   0% {
-    transform: translateX(-200%) rotateZ(0deg);
+    transform: translateX(-400%) rotateZ(0deg) translateY(-20%);
   }
   50% {
-    transform: translateX(0%) rotateZ(540deg);
+    transform: translateX(0%) rotateZ(540deg) translateY(40%);
   }
+
   100% {
-    transform: translateX(200%) rotateZ(1080deg);
+    transform: translateX(400%) rotateZ(1080deg) translateY(-20%);
   }
 }

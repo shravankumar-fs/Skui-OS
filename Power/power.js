@@ -46,12 +46,13 @@ shutdown.addEventListener("click", () => {
   powerBtn.addEventListener("click", () => {
     let interval = setInterval(() => {
       mDisplay.innerHTML = message.substring(0, idx);
+      mDisplay.classList.add("messagePowerActive");
       idx++;
       if (idx == message.length) {
         clearInterval(interval);
       }
     }, 50);
-    leafDisplay.style.animation = "leaf-animate 3s ease-in ";
+    leafDisplay.style.animation = "leaf-animate 3s ease-in-out ";
     setTimeout(() => {
       document.getElementById("alert").play();
     }, 100);
