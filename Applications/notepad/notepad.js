@@ -26,8 +26,23 @@ function addNewNote() {
   const note = document.createElement("div");
   note.classList.add("note");
   note.id = "notePadNote";
+
+  // const iconSpacer = document.getElementById("iconSpacer");
+  // const notePadIcon = document.createElement("button");
+  // notePadIcon.classList.add("notePadIcon");
+  // notePadIcon.id = "notePadIcon";
+  // notePadIcon.innerHTML = "NotePad";
+  // iconSpacer.appendChild(notePadIcon);
+
   /**ToolBar */
-  const noteToolBar = buildToolBar(note, "noteToolBar", "noteToolBar", "Notes");
+
+  const noteToolBar = buildToolBar(
+    note,
+    "noteToolBar",
+    "noteToolBar",
+    "Notes",
+    "notePadIcon"
+  );
   /**Tools */
   const tools = document.createElement("div");
   tools.classList.add("tools");
@@ -69,6 +84,11 @@ function addNewNote() {
   editBtn.addEventListener("click", () => {
     main.classList.toggle("notePadHidden");
     textarea.classList.toggle("notePadHidden");
+    if (textarea.classList.contains("notePadHidden"))
+      editBtn.innerHTML = `Edit <i class="fas fa-edit"></i>`;
+    else
+      editBtn.innerHTML = `Save <i class="fas fa-ed
+    it"></i>`;
   });
 
   textarea.addEventListener("input", (e) => {

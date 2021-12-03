@@ -1,8 +1,8 @@
 /** Paint*/
 
 .paintWindow {
-  height: 360px;
-  width: 450px;
+  height: 510px;
+  width: 600px;
   display: flex;
   flex-direction: column;
   box-shadow: 0px 1px 15px rgba(0, 0, 0, 0.5);
@@ -10,6 +10,7 @@
 }
 .paintCanvas {
   background-color: white;
+  cursor: crosshair;
 }
 .paintToolBar,
 .paintToolBox {
@@ -24,9 +25,14 @@
   display: flex;
   justify-content: space-between;
   cursor: move;
+  background: linear-gradient(skyblue, steelblue, skyblue);
+  padding: 2px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
 }
 .paintToolBox > * {
   margin: 0 15px 0 15px;
+  cursor: pointer;
 }
 #color {
   border: none;

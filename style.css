@@ -10,6 +10,7 @@
 @import url("./util/NotImplemented.css");
 @import url("./Applications/activity-monitor/activity.css");
 @import url("./Applications/User-Info/user-info.css");
+@import url("./Widgets/Clock/clock.css");
 * {
   box-sizing: border-box;
   margin: 0;
@@ -30,7 +31,7 @@ body {
     "taskbar";
   height: 100vh;
   width: 100vw;
-  background-image: url("https://images.unsplash.com/photo-1634492599187-b89b0dfd1e50?ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDE2fENEd3V3WEpBYkV3fHxlbnwwfHx8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=960");
+  background-image: url("https://images.unsplash.com/photo-1634492597965-701e867bb733?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1932&q=80");
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -50,11 +51,16 @@ body {
     rgba(56, 150, 250, 0.4)
   );
 }
+.iconSpacer {
+  /* border: 1px gray inset; */
+  /* border-top: 0;
+  width: 70%; */
+}
 .timer {
   font-family: inherit;
   font-weight: bold;
-  letter-spacing: 0.5px;
-  font-size: 12px;
+  letter-spacing: 1px;
+  font-size: 14px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -209,4 +215,31 @@ button:active {
 }
 .RClickMenu .mOption:hover {
   background-color: rgba(37, 100, 255, 0.8);
+}
+.bottle {
+  height: 50px;
+  width: 50px;
+  font-size: 25px;
+  color: sandybrown;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  text-shadow: 1px 1px 6px rgba(0, 0, 100, 0.5);
+}
+@keyframes bottle-rotate {
+  0% {
+    transform: rotateZ(0deg);
+    color: sandybrown;
+  }
+  50% {
+    transform: rotateZ(360deg);
+    color: greenyellow;
+    text-shadow: 1px 1px 6px rgba(255, 255, 100, 0.5);
+  }
+  100% {
+    transform: rotateZ(720deg);
+    color: white;
+    text-shadow: 1px 1px 6px lavender;
+  }
 }

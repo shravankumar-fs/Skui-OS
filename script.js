@@ -15,6 +15,12 @@ window.oncontextmenu = function () {
   return false;
 };
 arena.oncontextmenu = function (e) {
+  let children = arena.children;
+  for (let i = 0; i < children.length; i++) {
+    children[i].oncontextmenu = function () {
+      return false;
+    };
+  }
   showCustomMenu(e);
   return false;
 };
@@ -35,7 +41,7 @@ class RClickMenu {
     op1.innerHTML = "Refresh";
     op2.innerHTML = "Sort Icons";
     op3.innerHTML = "Change Background";
-    op1.id = "t1";
+    op1.id = "refresh";
     op2.id = "t2";
     op3.id = "changeBackgroundPic";
 
@@ -47,8 +53,20 @@ class RClickMenu {
     setInterval(() => {
       menu.remove();
     }, 3000);
-    op1.addEventListener("click", () => {
+
+    op1.addEventListener("click", (e) => {
       clearRightMenu();
+      const icon = document.createElement("div");
+      icon.innerHTML = `<i class="fas fa-hourglass-end"></i>`;
+      icon.classList.add("bottle");
+      icon.style.top = e.clientY + "px";
+      icon.style.left = e.clientX + "px";
+      console.log(e);
+      icon.style.animation = "bottle-rotate 0.6s ease-out";
+      arena.appendChild(icon);
+      setTimeout(() => {
+        icon.remove();
+      }, 600);
     });
     op2.addEventListener("click", () => {
       clearRightMenu();

@@ -25,4 +25,7 @@ let createAlert = function () {
       dialog.remove();
     }, 500);
   });
+  setTimeout(() => {
+    dialog.remove();
+  }, 10000);
 };

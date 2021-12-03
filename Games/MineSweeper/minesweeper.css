@@ -1,5 +1,10 @@
 :root {
-  --minesweeper-bg: rgba(100, 100, 100, 1);
+  --minesweeper-bg: linear-gradient(
+    45deg,
+    rgba(134, 207, 236, 0.5),
+    rgb(0, 0, 255, 0.5),
+    rgba(134, 207, 236, 0.5)
+  );
 }
 
 /**MineSweeper */
@@ -8,7 +13,7 @@
   width: 290px;
   display: flex;
   flex-direction: column;
-  background-color: var(--minesweeper-bg);
+  background: var(--minesweeper-bg);
   box-shadow: 0px 1px 15px rgba(0, 0, 0, 0.3);
   font-family: "Orbitron", sans-serif;
   position: absolute;
@@ -16,7 +21,6 @@
 .mineToolbar {
   height: 35px;
   width: inherit;
-  background-color: steelblue;
   letter-spacing: 1px;
   text-align: center;
   padding: 5px;
@@ -24,6 +28,10 @@
   display: flex;
   justify-content: space-between;
   color: white;
+  background: linear-gradient(skyblue, steelblue, skyblue);
+  padding: 2px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
 }
 .mineToolbar i {
   background-color: yellow;

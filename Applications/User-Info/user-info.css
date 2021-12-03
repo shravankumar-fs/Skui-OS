@@ -9,12 +9,12 @@
   font-family: "Poppins", sans-serif;
   align-self: center;
   height: 600px;
-  width: 600px;
+  width: 700px;
   background-color: var(--userCard-bg);
   border-radius: 20px;
   display: grid;
   grid-template-rows: 35px 265px 30px 180px 60px 30px;
-  grid-template-columns: 30px 540px 30px;
+  grid-template-columns: 30px 640px 30px;
   grid-template-areas:
     "toolbar toolbar toolbar"
     ". main ."
@@ -46,6 +46,10 @@
   justify-content: space-between;
   align-items: center;
   cursor: move;
+  background: linear-gradient(skyblue, steelblue, skyblue);
+  padding: 2px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
 }
 .user-tagline {
   margin-left: 20px;
@@ -53,9 +57,39 @@
   font-weight: 900;
   color: white;
 }
-.user-tagline > * {
-  text-shadow: 0 0 10px var(--userCard-bg-black);
+.user-tagline .userTagLineEl {
+  text-shadow: 10px 10px 20px var(--userCard-bg-black);
   font-family: "Poppins", sans-serif;
+  position: relative;
+  margin-bottom: 20px;
+}
+.user-tagline .userTagLineEl::after {
+  content: "";
+  position: absolute;
+  top: 18px;
+  left: 0;
+  background-color: rgba(136, 209, 238, 0.4);
+  height: 5px;
+  width: 100%;
+  margin-top: 2px;
+  border-bottom-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+  z-index: 0;
+  animation: underline 1s ease-in-out infinite forwards;
+}
+@keyframes underline {
+  from {
+    background-color: rgb(29, 176, 235);
+    opacity: 0.7;
+    border-bottom-left-radius: 20%;
+    border-bottom-right-radius: 50%;
+  }
+  to {
+    background-color: skyblue;
+    opacity: 0.2;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 20%;
+  }
 }
 .user-image {
   background-image: url("../../resources/SK.jpg");
@@ -84,7 +118,7 @@
 .user-skills,
 .user-education,
 .user-works {
-  width: 100px;
+  width: 130px;
   position: relative;
   padding-top: 30px;
   font-family: "Poppins", sans-serif;
@@ -104,6 +138,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  text-transform: uppercase;
 }
 
 .user-skills::before {
@@ -169,7 +204,7 @@
   visibility: visible;
 }
 .user-education {
-  width: 100px;
+  width: 130px;
 }
 
 .user-works a:hover {
@@ -224,4 +259,64 @@
   left: -2px;
   top: 0px;
   opacity: 0.3;
+}
+.bird {
+  background: url("https://media.giphy.com/media/tCJfibBuyK1Gw/giphy.gif");
+  height: 100px;
+  width: 100px;
+  position: absolute;
+  left: -100px;
+  top: 100px;
+  transform: scale(0.5);
+  animation: bird 3s;
+  opacity: 0;
+}
+@keyframes bird {
+  0% {
+    transform: translate(0px, 700px) scale(0.5);
+  }
+  25% {
+    transform: translate(500px, 500px) scale(0.5);
+    z-index: 0;
+    opacity: 1;
+  }
+  26% {
+    transform: translate(500px, 500px) scale(0.5) rotateY(180deg);
+    z-index: -1;
+    opacity: 0.5;
+  }
+  49% {
+    transform: translate(0px, 400px) scale(0.5) rotateY(180deg);
+    z-index: -1;
+    opacity: 0.5;
+  }
+  50% {
+    transform: translate(0px, 400px) scale(0.5);
+    z-index: 1;
+    opacity: 1;
+  }
+  74% {
+    transform: translate(500px, 300px) scale(0.5);
+    z-index: 1;
+    opacity: 1;
+  }
+  75% {
+    transform: translate(500px, 300px) scale(0.5) rotateY(180deg);
+    z-index: -1;
+    opacity: 0.5;
+  }
+  98% {
+    transform: translate(0px, 0px) scale(0.5);
+    z-index: 1;
+    opacity: 1;
+  }
+  99% {
+    transform: translate(0px, 0px) scale(0.5);
+    z-index: 1;
+    opacity: 1;
+  }
+  100% {
+    transform: translate(0px, 0px) scale(0.5);
+    opacity: 0;
+  }
 }
