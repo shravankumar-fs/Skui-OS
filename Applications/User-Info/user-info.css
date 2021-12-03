@@ -260,3 +260,63 @@
   top: 0px;
   opacity: 0.3;
 }
+.bird {
+  background: url("https://media.giphy.com/media/tCJfibBuyK1Gw/giphy.gif");
+  height: 100px;
+  width: 100px;
+  position: absolute;
+  left: -100px;
+  top: 100px;
+  transform: scale(0.5);
+  animation: bird 3s;
+  opacity: 0;
+}
+@keyframes bird {
+  0% {
+    transform: translate(0px, 700px) scale(0.5);
+  }
+  25% {
+    transform: translate(500px, 500px) scale(0.5);
+    z-index: 0;
+    opacity: 1;
+  }
+  26% {
+    transform: translate(500px, 500px) scale(0.5) rotateY(180deg);
+    z-index: -1;
+    opacity: 0.5;
+  }
+  49% {
+    transform: translate(0px, 400px) scale(0.5) rotateY(180deg);
+    z-index: -1;
+    opacity: 0.5;
+  }
+  50% {
+    transform: translate(0px, 400px) scale(0.5);
+    z-index: 1;
+    opacity: 1;
+  }
+  74% {
+    transform: translate(500px, 300px) scale(0.5);
+    z-index: 1;
+    opacity: 1;
+  }
+  75% {
+    transform: translate(500px, 300px) scale(0.5) rotateY(180deg);
+    z-index: -1;
+    opacity: 0.5;
+  }
+  98% {
+    transform: translate(0px, 0px) scale(0.5);
+    z-index: 1;
+    opacity: 1;
+  }
+  99% {
+    transform: translate(0px, 0px) scale(0.5);
+    z-index: 1;
+    opacity: 1;
+  }
+  100% {
+    transform: translate(0px, 0px) scale(0.5);
+    opacity: 0;
+  }
+}

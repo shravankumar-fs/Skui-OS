@@ -52,7 +52,9 @@ function createCard() {
   userCard.appendChild(createUserOverView());
   userCard.appendChild(createUserDetails());
   userCard.appendChild(createUserContact());
-
+  const bird = document.createElement("div");
+  bird.classList.add("bird");
+  userCard.appendChild(bird);
   arena.appendChild(userCard);
   dragElement(userCard, document.getElementById("userCardToolbar"));
 }
