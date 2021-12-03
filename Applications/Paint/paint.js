@@ -16,8 +16,8 @@ paint.addEventListener("click", () => {
     paintWindow.id = "paintWindow";
     const canvas = document.createElement("canvas");
     canvas.id = "canvas";
-    canvas.height = "300";
-    canvas.width = "450";
+    canvas.height = "440";
+    canvas.width = "600";
     canvas.classList.add("paintCanvas");
 
     const paintToolBar = buildToolBar(

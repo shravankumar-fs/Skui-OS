@@ -1,5 +1,10 @@
 :root {
-  --ttt-bg: white;
+  --ttt-bg: linear-gradient(
+    45deg,
+    rgba(134, 207, 236, 0.5),
+    rgb(0, 0, 255, 0.5),
+    rgba(134, 207, 236, 0.5)
+  );
   --ttt-sq-bg: #ede474;
   --ttt-sq-bg-marked: white;
   --ttt-sq-fg-marked: steelblue;
@@ -13,7 +18,7 @@
   width: 300px;
   display: flex;
   flex-direction: column;
-  background-color: var(--ttt-bg);
+  background: var(--ttt-bg);
   box-shadow: 0px 1px 15px rgba(0, 0, 0, 0.3);
   font-family: "Orbitron", sans-serif;
   position: absolute;
@@ -22,14 +27,15 @@
 .TicTacToeToolbar {
   height: 35px;
   width: inherit;
-  background-color: steelblue;
-  letter-spacing: 1px;
   text-align: center;
   padding: 5px;
   cursor: move;
   display: flex;
   justify-content: space-between;
   color: white;
+  background: linear-gradient(skyblue, steelblue, skyblue);
+  letter-spacing: 1px;
+  text-transform: uppercase;
 }
 
 .TicTacToeContainer {

@@ -1,6 +1,6 @@
 /** Browser Properties */
 .browserWindow {
-  height: 330px;
+  height: 630px;
   width: 80vw;
   display: flex;
   flex-direction: column;
@@ -8,14 +8,17 @@
 }
 .bToolbar {
   height: 30px;
-  background-color: steelblue;
   width: 80vw;
   display: flex;
   justify-content: space-between;
   cursor: move;
+  background: linear-gradient(skyblue, steelblue, skyblue);
+  padding: 2px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
 }
 .browser {
   background-color: white;
-  height: 300px;
+  height: 600px;
   width: 80vw;
 }
