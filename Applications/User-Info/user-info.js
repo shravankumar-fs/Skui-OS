@@ -116,17 +116,17 @@ function createUserDetails() {
   const userWorks = document.createElement("div");
   userWorks.classList.add("user-works");
   userWorks.innerHTML = `
-  <a target="_blank" href="https://stardragoncoder.github.io/Skui-OS/"
+  <a target="_blank" href="https://shravankumar-fs.github.io/Skui-OS/"
           >RocketOS</a
         >
         <a
           target="_blank"
-          href="https://stardragoncoder.github.io/Solar-System/"
+          href="https://shravankumar-fs.github.io/Solar-System/"
           >Solar System</a
         >
         <a
           target="_blank"
-          href="https://stardragoncoder.github.io/50PROJECTS-TUTORIAL/"
+          href="https://shravankumar-fs.github.io/50PROJECTS-TUTORIAL/"
           >Mini Widgets</a
         >
   `;
