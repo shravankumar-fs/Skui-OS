@@ -52,9 +52,7 @@ function createCard() {
   userCard.appendChild(createUserOverView());
   userCard.appendChild(createUserDetails());
   userCard.appendChild(createUserContact());
-  const bird = document.createElement("div");
-  bird.classList.add("bird");
-  userCard.appendChild(bird);
+
   arena.appendChild(userCard);
   dragElement(userCard, document.getElementById("userCardToolbar"));
 }
@@ -124,7 +122,12 @@ function createUserDetails() {
         <a
           target="_blank"
           href="https://stardragoncoder.github.io/Solar-System/"
-          >SolarSystem</a
+          >Solar System</a
+        >
+        <a
+          target="_blank"
+          href="https://stardragoncoder.github.io/50PROJECTS-TUTORIAL/"
+          >Mini Widgets</a
         >
   `;
   const userEducation = document.createElement("div");
