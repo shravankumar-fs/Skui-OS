@@ -116,19 +116,9 @@ function createUserDetails() {
   const userWorks = document.createElement("div");
   userWorks.classList.add("user-works");
   userWorks.innerHTML = `
-  <a target="_blank" href="https://shravankumar-fs.github.io/Skui-OS/"
-          >RocketOS</a
-        >
-        <a
-          target="_blank"
-          href="https://shravankumar-fs.github.io/Solar-System/"
-          >Solar System</a
-        >
-        <a
-          target="_blank"
-          href="https://shravankumar-fs.github.io/50PROJECTS-TUTORIAL/"
-          >Mini Widgets</a
-        >
+  <a target="_blank" href="https://shravankumarui.com/>Solar System</a>
+  <a target="_blank" href="http://rocketos.shravankumarui.com/">RocketOS</a>
+  <a target="_blank" href="https://50days-50-js-widgets.shravankumarui.com">Mini Widgets</a>
   `;
   const userEducation = document.createElement("div");
   userEducation.classList.add("user-education");
