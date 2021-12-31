@@ -2,8 +2,8 @@ import { dragElement } from "../../util/draggable.js";
 import { buildToolBar } from "../../util/ToolBar.js";
 
 let tagLines = [
-  "I'm a Full Stack Developer from India",
-  "I love exploring three.js and 3D Web Animations",
+  "Hey I'm Shravan, a Frontend dev",
+  "I love exploring 3D Web Components and Animations",
 ];
 
 let skillArr = [
@@ -116,8 +116,8 @@ function createUserDetails() {
   const userWorks = document.createElement("div");
   userWorks.classList.add("user-works");
   userWorks.innerHTML = `
-  <a target="_blank" href="https://shravankumarui.com/>Solar System</a>
-  <a target="_blank" href="http://rocketos.shravankumarui.com">RocketOS</a>
+  <a target="_blank" href="https://shravankumarui.com">Solar System</a>
+  <a target="_blank" href="https://rocketos.shravankumarui.com">RocketOS</a>
   <a target="_blank" href="https://50days-50-js-widgets.shravankumarui.com">Mini Widgets</a>
   `;
   const userEducation = document.createElement("div");
