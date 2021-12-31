@@ -117,7 +117,7 @@ function createUserDetails() {
   userWorks.classList.add("user-works");
   userWorks.innerHTML = `
   <a target="_blank" href="https://shravankumarui.com/>Solar System</a>
-  <a target="_blank" href="http://rocketos.shravankumarui.com/">RocketOS</a>
+  <a target="_blank" href="http://rocketos.shravankumarui.com">RocketOS</a>
   <a target="_blank" href="https://50days-50-js-widgets.shravankumarui.com">Mini Widgets</a>
   `;
   const userEducation = document.createElement("div");
