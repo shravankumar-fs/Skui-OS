@@ -3,7 +3,7 @@ import { buildToolBar } from "../../util/ToolBar.js";
 
 let tagLines = [
   "Hey I'm Shravan, a Frontend dev",
-  "I love exploring 3D Web Components and Animations",
+  "I play around 3D Web Components and Creative Animations",
 ];
 
 let skillArr = [
@@ -116,9 +116,9 @@ function createUserDetails() {
   const userWorks = document.createElement("div");
   userWorks.classList.add("user-works");
   userWorks.innerHTML = `
-  <a target="_blank" href="https://shravankumarui.com">Solar System</a>
-  <a target="_blank" href="https://rocketos.shravankumarui.com">RocketOS</a>
-  <a target="_blank" href="https://50days-50-js-widgets.shravankumarui.com">Mini Widgets</a>
+  <a target="_blank" href="https://shravankumarui.com">Solar System</a><br>
+  <a target="_blank" href="https://rocketos.shravankumarui.com">RocketOS</a><br>
+  <a target="_blank" href="https://50days-50-js-widgets.shravankumarui.com">Mini Widgets</a><br>
   `;
   const userEducation = document.createElement("div");
   userEducation.classList.add("user-education");
